@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/api/v1/customers',[CustomerController::class,'customers'])->name('customer');
+Route::get('/api/v1/customers',[CustomerController::class,'customers'])->name('customer.customers');
+Route::post('/api/v1/newCustomers',[CustomerController::class,'newCustomers'])->name('customer');
+Route::post('/api/v1/addCustomers',[CustomerController::class,'addCustomers'])->name('customer.add');
